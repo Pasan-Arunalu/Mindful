@@ -1,0 +1,71 @@
+body, html{
+    padding: 0%;
+}
+
+body{
+    background-image: url(img/Untitled\ \(7\).png);
+    background-size: cover;
+}
+
+.container-fluid	{
+    height: 160vh;
+    background-color: rgba(165, 222, 245, 0.582);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+}
+
+.head{
+    text-align: center;
+    font-size: 55px;
+}
+
+.des{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.col{
+    align-items: center;
+    justify-content: center;
+} 
+
+.card{
+    width: 300px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 18px 15px 0px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.07);
+    transition: 1s;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgba(165, 222, 245, 0.582);
+    height: 50vh;
+}
+
+.wrapper2 p{
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+}

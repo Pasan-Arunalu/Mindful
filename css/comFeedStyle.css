@@ -1,0 +1,30 @@
+html, body, .container-fluid {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    display: flex;
+    padding: 30px;
+}
+
+.wrapper1 {
+    width: 100%;
+
+}
+
+.topic{
+    width: 100%;
+    height: 15vh;
+}
+
+.navi{
+    width: 100%;
+    height: 7vh;
+    margin-top: 15px;
+}
+
+.wrapper2{
+    
+}

@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/Untitled\ \(8\).png);
+    background-size: cover;
+}
+
+form{ 
+    height: 80vh;
+    width: 150vh;
+    margin-top: 80px;
+    background-color: rgba(165, 222, 245, 0.582);
+    border-radius: 10px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline; 
+    height: 65vh;
+    width: 65vh;
+    background-image: url(img/Untitled\ \(9\).png);
+    background-size: cover;
+    border-radius: 300px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column; /* Stack divs vertically */
+    justify-content: center; /* Center divs vertically within each column */
+    margin: 0 0px; /* Optional: add some horizontal spacing between columns */
+    margin-top: 30px;
+    margin-left: 90px;
+    font-weight: bold;
+}
+
+.column2{
+    display: flex;
+    flex-direction: column; /* Stack divs vertically */
+    justify-content: center; /* Center divs vertically within each column */
+    margin: 0 0px; /* Optional: add some horizontal spacing between columns */
+    margin-top: 30px;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.box {
+    padding: 10px;
+    margin: 5px 0; /* Optional: add some vertical spacing between divs */
+    border: none;
+    box-sizing: border-box;
+    height: 120px;
+    width: 450px;
+}
+
+.box label {
+    padding: 10px;
+}
+
+.box2 {
+    padding: 10px;
+    margin: 5px 0; /* Optional: add some vertical spacing between divs */
+    border: none;
+    box-sizing: border-box;
+    height: 120px;
+    width: 450px;
+    margin-left: 90px;
+}
+
+.box2 label {
+    padding: 10px;
+}
+
+#input1{
+    height: 65px;
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    padding: 10px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.label1 {
+    margin: 0px;
+    margin-right: 5px ;
+    width: 60px;
+}
+
+.label2{
+    margin: 20px;
+    margin-right: 10px ;
+    width: 60px;
+}
+
+.label3{
+    margin: 20px;
+    margin-right: 5px ;
+    width: 60px;
+}
+
+#male, #female, #other{
+    width: 30px;
+    cursor: pointer;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.submit-container button{
+    height: 65px;
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.dis{
+    margin-top: 20px;
+    text-align: center;
+    font-size: small;
+}
