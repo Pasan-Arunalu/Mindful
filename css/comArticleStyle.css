@@ -23,17 +23,14 @@ html, body, .container-fluid {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     background-color: #69acc7;
 }
 
 .comname{
     width: 70%;
-}
-
-.comname h3{
     font-size: 50px;
-
+    font-weight: 500;
 }
 
 .btn{
@@ -56,7 +53,7 @@ html, body, .container-fluid {
     width: 100%;
     height: 7vh;
     margin-top: 7px;
-    padding-left: 20px;
+    padding-left: 10px;
     background-color: #8ac3da;
 
 }
@@ -72,44 +69,83 @@ html, body, .container-fluid {
     height: 100%;
     margin-top: 15px;
     display: flex;
-
-}
-
-.div1{
-    width: 29%;
-    height: 100%;
-    background-color: snow;
-}
-
-.div2{
-    width: 70%;
-    height: 100%;
-    margin-left : 1%;
-    display: flex;
     flex-direction: column;
 }
 
-.ft{
+.topic1{
+    width: 100%;
+    height: 3rem;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 5vh;
-    background-color: snow;
     padding: 10px;
-}
-
-.ft h4{
-    margin-top: 8px;
-}
-
-.content{
-    width: 100%;
-    height: 100%;
-    margin-top: 7px;
+    font-size: 20px;
     background-color: snow;
+}
 
+#t1{
+    margin-top: 10px;
 }
 
 #navlink {
     margin-left: 150px;
+}
+
+.topicArt{
+    width: 100%;
+    height: 10rem;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: snow;
+}
+
+.dp{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    margin-left: 1rem;
+}
+
+.dp img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+}
+
+.wrap{
+    height: 5rem;
+    width: 20rem;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.wrap2{
+    height: 5rem;
+    width: 20rem;
+}
+
+.t1{
+    height: 50%;
+    width: 100%;
+    display: flex;
+
+}
+
+.t1 p{
+    margin-top: 15px;
+}
+
+.flbtn{
+    height: 5rem;
+    width: 5rem;
+}
+
+.art{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    background-color: snow;
 }
