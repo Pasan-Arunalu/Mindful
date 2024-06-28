@@ -3,12 +3,11 @@ session_start();
 include("connection.php");
 
 // Validate and sanitize input parameters
-// $com_id = isset($_GET['com_id']) ? intval($_GET['com_id']) : 0;
-// $article_id = isset($_GET['article_id']) ? intval($_GET['article_id']) : 0;
+$article_id = isset($_GET['articleID']) ? intval($_GET['articleID']) : 0;
 
-// if ($com_id <= 0 || $article_id <= 0) {
-//     die("Invalid community ID or article ID");
-// }
+if ($article_id <= 0) {
+    die("Invalid article ID");
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,14 +28,21 @@ include("connection.php");
 </head>
 <body>
 
+<?php
+    include 'navbar.php';
+?>
+
     <div class="container-fluid">
         <div class="wrapper1">
             <div class="topic">
                 <div class="comname">
                     <?php
-                    // Prepared statement to fetch community name
-                    $stmt = $conn->prepare("SELECT com_name FROM communities WHERE com_id = ?");
-                    $stmt->bind_param("i", $com_id);
+                    // Prepared statement to fetch community name based on article_id
+                    $stmt = $conn->prepare("SELECT c.com_name 
+                                            FROM communities c
+                                            JOIN article a ON c.com_id = a.com_id
+                                            WHERE a.article_id = ?");
+                    $stmt->bind_param("i", $article_id);
                     $stmt->execute();
                     $stmt->bind_result($community_name);
                     if ($stmt->fetch()) {
@@ -54,35 +60,38 @@ include("connection.php");
             <div class="navi">
                 <ul class="nav nav-underline">
                     <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#">Feed</a>
+                      <a class="nav-link " id="nav-link" aria-current="page" href="#">Feed</a>
                     </li>
                     <li class="nav-item" id="navlink">
-                      <a class="nav-link" href="#">Collection</a>
+                      <a class="nav-link" id="nav-link" href="#">Collection</a>
                     </li>
                     <li class="nav-item" id="navlink">
-                      <a class="nav-link" href="#">Communities</a>
+                      <a class="nav-link" id="nav-link" href="#">Communities</a>
                     </li>
                   </ul>
             </div>
             <div class="wrapper2">
                 <?php
-                // Prepared statement to fetch article details
-                $stmt = $conn->prepare("SELECT * FROM article WHERE article_id = ?");
+                // Prepared statement to fetch article and user details
+                $stmt = $conn->prepare("SELECT a.*, u.User_Name, u.user_image 
+                                        FROM article a 
+                                        JOIN user u ON a.User_id = u.User_id 
+                                        WHERE a.article_id = ?");
                 $stmt->bind_param("i", $article_id);
                 $stmt->execute();
                 $result = $stmt->get_result();
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo "<div class='topic1'>" . htmlspecialchars($row["com_id"]) . "</div>";
                         echo "<div class='topic1' id='t1'>" . htmlspecialchars($row["article_name"]) . "</div>";
                         echo "<div class='topicArt'>
                                 <div class='dp'>
-                                    <img src='" . htmlspecialchars($row["image"]) . "' alt=''>
+                                    <img src='" . htmlspecialchars($row["user_image"]) . "' alt='User Image'>
                                 </div>
                                 <div class='wrap'>
                                     <div class='wrap2'>
                                         <div class='t1'>
-                                            <p>" . htmlspecialchars($row["User_id"]) . " <span style='margin-left: 50px;'>Follow</span></p>
+                                            <h4>" . htmlspecialchars($row["User_Name"]) . " </h4>
+                                            <h4>&nbsp•&nbspFollow</h4>
                                         </div>
                                         <div class='t1'>
                                             Last Update
@@ -92,7 +101,7 @@ include("connection.php");
                               </div>";
                         echo "<div class='art'>
                                 <div class='cover'>
-                                    <img src='" . htmlspecialchars($row["image"]) . "' alt=''>
+                                    <img src='" . htmlspecialchars($row["article_image"]) . "' alt='Article Image'>
                                 </div>
                                 <div class='content'>
                                     <p>" . htmlspecialchars($row["content"]) . "</p>

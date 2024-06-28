@@ -1,10 +1,10 @@
-html, body, .container-fluid {
-    height: 100%;
+html, body, #container-fluid {
+    height: auto;
     margin: 0;
     padding: 0;
 }
 
-.container-fluid {
+#container-fluid {
     display: flex;
     padding: 10px;
 }
@@ -14,9 +14,10 @@ html, body, .container-fluid {
     padding: 5px;
     display: flex;
     flex-direction: column;
+    margin-top: 70px;
 }
 
-.topic{
+.topic {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -27,23 +28,23 @@ html, body, .container-fluid {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.comname{
+.comname {
     width: 70%;
+    margin-left: 20px;
 }
 
-.comname h3{
+.comname h3 {
     font-size: 50px;
-
 }
 
-.btn{
+.btn {
     width: 30%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.btn button{
+.btn button {
     height: 70px;
     width: 200px;
     border-radius: 10px;
@@ -52,46 +53,46 @@ html, body, .container-fluid {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.navi{
+.navi {
     width: 100%;
     height: 7vh;
     margin-top: 7px;
     padding-left: 20px;
     background-color: #8ac3da9d;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
 }
 
-.nav-link{
-    font-size: 25px;
+#nav-link {
+    font-size: 18px;
     color: #042630;
     text-decoration: none;
 }
 
-.wrapper2{
+.wrapper2 {
     width: 100%;
     height: 100%;
     margin-top: 15px;
     display: flex;
-
 }
 
-.div1{
+.div1 {
     width: 29%;
     height: 100%;
     background-color: snow;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 20px;
 }
 
-.div2{
+.div2 {
     width: 70%;
     height: 100%;
-    margin-left : 1%;
+    margin-left: 1%;
     display: flex;
     flex-direction: column;
+    gap: 10px; /* Add gap between articles */
 }
 
-.ft{
+.ft {
     display: flex;
     align-items: center;
     width: 100%;
@@ -101,14 +102,12 @@ html, body, .container-fluid {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.ft h4{
+.ft h4 {
     margin-top: 8px;
 }
 
-.content{
+.content {
     width: 100%;
-    height: 100%;
-    margin-top: 7px;
     background-color: snow;
     display: flex;
     flex-direction: column;
@@ -116,28 +115,28 @@ html, body, .container-fluid {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.cover{
-    height: 50%;
+.cover {
+    height: 25rem;
     width: 100%;
     display: flex;
-    background-image: url(img/bench-chair-1617335_640.jpg);
     background-size: cover;
+    background-position: center;
 }
 
-.title{
+.title {
     height: 20%;
     width: 100%;
     display: flex;
     flex-direction: row;
 }
 
-.dp{
+.dp {
     height: 100%;
     width: 20%;
     position: relative;
 }
 
-.dp2{
+.dp2 {
     height: 10rem;
     width: 10rem;
     border-radius: 100%;
@@ -145,16 +144,16 @@ html, body, .container-fluid {
     bottom: 5rem; 
     left: 50%;
     transform: translateX(-50%);
-
 }
 
-.dp img{
+.dp img {
     height: 10rem;
     width: 10rem;
     border-radius: 100%;
+    cursor: pointer;
 }
 
-.title2{
+.title2 {
     height: 100%;
     width: 80%;
     padding: 20px;
@@ -162,39 +161,52 @@ html, body, .container-fluid {
     flex-direction: column;
 }
 
-.author{
+.author {
     height: 50%;
     width: 30%;
+    cursor: pointer;
 }
 
-.com{
+.com {
     height: 50%;
     width: 30%;
+    cursor: pointer;
 }
 
-.art{
-    height: 30%;
+.art {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.title3{
-    height: 30%;
+.title3 {
     width: 100%;
     display: flex;
     align-items: center;
     padding-left: 15px;
+    cursor: pointer;
 }
 
-.cnt{
-    height: 70%;
+.cnt {
     width: 100%;
-    display: flex;
+    display: block;
+    word-wrap: break-word;
     align-items: center;
     padding-left: 15px;
+    cursor: pointer;
+}
+
+.cnt a{
+    text-decoration: none;
+    color: black;
 }
 
 #navlink {
     margin-left: 150px;
 }
+
+#article_link{
+    text-decoration: none;
+    color: black;
+}
+

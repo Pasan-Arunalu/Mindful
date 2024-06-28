@@ -33,7 +33,7 @@ body{
 .bottom_of_the_page,
 .footer {
   position: relative;
-  z-index: 1; /* Ensure content is above spline background */
+  z-index: 0; /* Ensure content is above spline background */
 }
 
 /* CSS in your existing stylesheet or a new one */
