@@ -47,7 +47,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php"
+                <a class="nav-link active" aria-current="page" href="homepage.php"
                   >HOME</a
                 >
               </li>
@@ -63,7 +63,7 @@
             </ul>
             <ul class="navbar-nav flex-grow-2 pe-3">
               <li class="nav-item">
-                <a class="nav-link" id="login" href="about.php">LOGIN</a>
+                <a class="nav-link" id="login" href="login.php">LOGIN</a>
               </li>
             </ul>
           </div>
@@ -81,7 +81,9 @@
       </button>
     </nav>
 
-    <div style="height: 2000px"></div>
+    <div class="watermark">
+
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

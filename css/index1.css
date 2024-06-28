@@ -1,0 +1,536 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.spline-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind other content */
+  pointer-events: none; /* Prevent interaction with spline element */
+  overflow: auto;
+}
+
+/* Adjust other elements to appear on top of spline background */
+.navbar,
+.pagetop,
+.divider,
+.divider2,
+.divider3,
+.divider4,
+.bottom_of_the_page,
+.footer {
+  position: relative;
+  z-index: 1; /* Ensure content is above spline background */
+}
+
+/* CSS in your existing stylesheet or a new one */
+.overlay {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: -1;
+  width: 150px; /* Adjust width and height as needed */
+  height: 50px;
+  background-color: white; /* Match the background color */
+}
+
+
+.pagetop {
+  position: relative;
+  height: 100vh;
+  background: url("images/pic2.jpg") no-repeat center center;
+  background-size: 110%; /* Slightly zoom in on the background image */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  justify-content: center;
+  padding-left: 20px; /* Add some padding to the left for better positioning */
+  color: rgb(253, 253, 253);
+}
+.Pictag {
+  margin-top: 125px;
+  margin-left: 250px;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 1);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 50px;
+  width: 250px;
+  line-height: 70px;
+  word-wrap: break-word;
+}
+.Pictag1 {
+  margin-top: 0;
+  margin-left: 250px;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 1);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 17px;
+  word-wrap: break-word;
+}
+.buttons {
+  margin-top: 20px;
+  margin-left: 250px;
+}
+.buttons button {
+  margin-right: 150px;
+}
+
+
+
+
+
+
+
+
+.navbar {
+  background-color: transparent;
+  transition: background-color 1.5s;
+  height: 80px;
+  padding: 0.5rem;
+}
+
+.scrolled {
+  background-color: rgba(195, 231, 247, 0.96);
+  transition: background-color 1s !important;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.nav-brand {
+  font-weight: 500;
+  color: #7fb3d5;
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.navbar-brand.me-auto {
+  color: #7fb3d5;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  font-size: 30px;
+  margin-left: 30px;
+  transition: 0.5s;
+}
+
+.navbar-brand.me-auto:hover {
+  color: #a2d5ab;
+  transition: 0.5s;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.offcanvas-body {
+  background-color: #03131a;
+}
+
+.offcanvas-body ul li a {
+  color: #7fb3d5;
+}
+
+.offcanvas-body .navbar-nav .nav-item:first-child .nav-link {
+  color: #7fb3d5;
+}
+
+.offcanvas-body .navbar-nav .nav-item:first-child .nav-link:hover {
+  color: #a2d5ab;
+}
+
+.offcanvas-body .navbar-nav .nav-item:not(:first-child) .nav-link:hover,
+.offcanvas-body .navbar-nav .nav-item:not(:first-child) .nav-link:active {
+  color: #a2d5ab;
+}
+
+.nav-link {
+  color: #b09d87;
+  font-weight: 500;
+  position: relative;
+  margin: 10px;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: rgb(250, 251, 255);
+}
+
+.navbar-nav li a {
+  color: snow;
+  text-decoration: none;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #a2d5ab;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .nav-link:hover::before,
+  .nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+  }
+
+  .offcanvas-body {
+    background-color: transparent;
+  }
+}
+
+/* Top of the page */
+/* .PicLogo img {
+  position: absolute;
+  margin-top: auto;
+  left: 900px;
+  width: 300px;
+  border-radius: 500px;
+  height: auto;
+}
+
+.Pictag {
+  margin-top: 185px;
+  margin-left: 250px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 50px;
+  width: 250px;
+  line-height: 90px;
+  word-wrap: break-word;
+}
+.Pictag1 {
+  margin-top: auto;
+  margin-left: 250px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 17px;
+  word-wrap: break-word;
+}
+.buttons {
+  margin-top: 20px;
+  margin-left: 250px;
+}
+.buttons button {
+  margin-right: 150px;
+} */
+
+/* Stories of inspire */
+.divider {
+  margin-top: 60px;
+  height: 250px;
+  background-color: #7fb3d5;
+}
+
+.cards {
+  background-color: #3f3853;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  width: 1000px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 18px 20px 20px rgba(0, 0, 0, 0.5);
+}
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.card-title {
+  display: inline;
+  vertical-align: middle;
+}
+
+.card_text {
+  text-align: center;
+}
+
+.btn-read-blog {
+  background-color: #abaeb9;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-read-blog:hover {
+  background-color: #59679c;
+}
+
+/* How u feeling today */
+.divider2 {
+  margin-top: 280px;
+  height: 250px;
+  background-color: #7fb3d5;
+}
+.Pictag3 {
+  font-size: 20px;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 500;
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+.divider3 {
+  margin-top: 380px;
+  height: 550px;
+  background-color: #7fb3d5;
+  text-align: center;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-card {
+  background-color: #3f3853;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 18px 20px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.image-card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.custom-button {
+  background-color: #cfd0d2;
+  color: rgb(0, 0, 0);
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 18px 20px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 30px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.custom-button:hover {
+  background-color: #4d9d9d;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* .custom-button:active {
+  background-color: #003f7f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+} */
+
+.custom-button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .custom-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Get the full experronce */
+.divider4 {
+  margin-top: 160px;
+  height: 250px;
+  background-color: #7fb3d5;
+  text-align: center;
+}
+
+.Pictag4 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 500;
+}
+
+#customContainer .card-custom {
+  display: flex;
+  background-color: #b0b0b0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease, box-shadow 0.3s ease;
+}
+
+#customContainer .card-custom .card-text {
+  flex: 1;
+}
+
+#customContainer .card-custom img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#customContainer .card-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-button {
+  background-color: rgb(139, 164, 164);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 70px;
+  font-size: 20px;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.rounded-button:hover {
+  background-color: #00c4cc;
+  transform: scale(1.05);
+}
+.rounded-button:active {
+  transform: scale(0.95);
+}
+
+.pictag_position {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.bottom_of_the_page {
+  text-align: center;
+  padding: 20px;
+}
+.bottom_texts {
+  margin-top: 100px;
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: #92bce7;
+  color: rgb(0, 0, 0);
+  padding: 40px 0;
+}
+.footer #footer-container .footer-left,
+.footer #footer-container .footer-middle,
+.footer #footer-container .footer-right {
+  margin-bottom: 20px;
+}
+.footer #footer-container .footer-middle img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.footer #footer-container .footer-middle h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.footer #footer-container .footer-middle p {
+  margin-bottom: 10px;
+}
+.footer #footer-container .social-icons a {
+  color: rgb(0, 0, 0);
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+.footer #footer-container .subscribe-form {
+  display: flex;
+}
+.footer #footer-container .subscribe-form input[type="email"] {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  background-color: rgb(255, 235, 185);
+  border-radius: 15px 0 0 15px;
+}
+.footer #footer-container .subscribe-form button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  background-color: #17a2b8;
+  color: rgb(0, 0, 0);
+}
+.footer_text,
+.Pictag5 {
+  text-align: center;
+  width: 100%;
+}
+.footer_text h2 {
+  font-size: 15px;
+  margin: 20px 0;
+}
+.Pictag5 {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

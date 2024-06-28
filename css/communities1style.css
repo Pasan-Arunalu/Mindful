@@ -69,3 +69,7 @@ body{
     text-align: center;
     font-size: 40px;
 }
+
+.btn{
+    width: 60%;
+}

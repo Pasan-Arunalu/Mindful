@@ -5,11 +5,23 @@ html, body {
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(img/Untitled\ \(8\).png);
-    background-size: cover;
+    position: relative;
 }
+
+.spline-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays behind other content */
+    pointer-events: none; /* Prevent interaction with spline element */
+    overflow: auto;
+  }
+
 
 form{ 
     height: 80vh;
@@ -20,14 +32,12 @@ form{
 
 }
 
-.container {
+#cnt {
     display: flex;
     justify-content: center;
     align-items: baseline; 
     height: 65vh;
     width: 65vh;
-    background-image: url(img/Untitled\ \(9\).png);
-    background-size: cover;
     border-radius: 300px;
 }
 
@@ -124,7 +134,7 @@ form{
     justify-content: center;
 }
   
-.submit-container button{
+#btn{
     height: 65px;
     width: 300px;
     border-radius: 15px;
@@ -134,10 +144,21 @@ form{
     align-items: center;
     font-weight: bold;
     font-size: larger;
+    background-color: #86b9b0;
 }
 
 .dis{
     margin-top: 20px;
     text-align: center;
     font-size: small;
+}
+
+.message-container {
+    text-align: center;
+    margin-top: 150px;
+    display: none;
+    width: 30%;
+}
+.message-container p {
+    font-size: 18px;
 }
